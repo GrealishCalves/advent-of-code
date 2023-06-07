@@ -10,6 +10,7 @@
     "start:prod": "node dist/index.js",
     "update": "npm-check-updates && ncu -u && npm install",
     "test": "jest",
+    "test-file": "npx jest -- $1",
     "commit": "git add . && aicommits --type conventional"
   },
   "author": "",
