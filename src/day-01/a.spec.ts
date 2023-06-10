@@ -7,7 +7,6 @@ describe("Advent of Code", () => {
     const data = await readDataAsync(filePath);
 
     const result = 24000;
-
     expect(result).toEqual(24000);
   });
 });
