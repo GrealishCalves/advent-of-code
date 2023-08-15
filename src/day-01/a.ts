@@ -1,8 +1,8 @@
 import { resolve } from "path";
 import { readDataAsync } from "../utils";
 
-async function mainAsync(): Promise<any> {
-  const filePath = resolve(__dirname, "../../data/day-01/a-test.txt");
+export async function mainAsync(): Promise<any> {
+  const filePath = resolve(__dirname, "../../data/day-01/a.txt");
   const data = await readDataAsync(filePath);
 
   const elfMap = new Map<number, number>();
@@ -26,7 +26,8 @@ async function mainAsync(): Promise<any> {
     elfMap.set(index, currentSum);
   }
 
-  console.log([...elfMap]);
+  const maxSum = Math.max(...elfMap.values());
+  return maxSum;
 }
 
 mainAsync().catch((error) => {

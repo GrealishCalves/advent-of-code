@@ -1,12 +1,8 @@
-import { readDataAsync } from "../utils";
-import { resolve } from "path";
+import { mainAsync } from "./a";
 
 describe("Advent of Code", () => {
   it("DAY01 - TESTING ANSWER", async () => {
-    const filePath = resolve(__dirname, "../../data/day-01/a-test.txt");
-    const data = await readDataAsync(filePath);
-
-    const result = 24000;
+    const result = await mainAsync();
     expect(result).toEqual(24000);
   });
 });
